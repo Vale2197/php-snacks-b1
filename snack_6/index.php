@@ -55,14 +55,13 @@ $array = [
 
             <?php if($key == 'teachers') { ?>
                 <div class="grey">
-
                     <?php for ($i=0; $i < count($value); $i++) { ?>
-                    <p>
-                       <?php echo $value[$i]['name'] . '<br>'; 
-                            echo $value[$i]['lastname'] . '<br>';
-                       ?>
-                    </p>
-                <?php } ?>
+                        <p>
+                        <?php echo $value[$i]['name'] . '<br>'; 
+                                echo $value[$i]['lastname'] . '<br>';
+                        ?>
+                        </p>
+                    <?php } ?>
                 </div>
                
            <?php }
