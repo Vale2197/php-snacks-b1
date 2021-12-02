@@ -4,35 +4,33 @@ Olimpia Milano - Cantù | 55-60 */
 
 $array = [
     [
-        "data"  => "sabato 8" [
-            "sCasa" => "Olimpia Milano",
-            "sOspite" => "Cantu",
-            "punteggio" => "55-60",
-        ],
-        
+        "data"  => "sabato 8",
+        "punteggio" => "55-60",
+        "sCasa" => "Olimpia Milano",
+        "sOspite" => "Cantu",
+               
     ],
 
     [
-         "data"  => "sabato 9" [
-             "sCasa" => "Olimpia Milano",
-             "sOspite" => "squadra",
-             "punteggio" => "22-30",
-         ],
+        "data"  => "sabato 9", 
+        "sCasa" => "napoli",
+        "sOspite" => "squadra",
+        "punteggio" => "22-30",
+       
     ],
 
     [
         
-        "data"  => "sabato 10" [
-             "sCasa" => "Olimpia Milano",
-             "sOspite" => "Cantu",
-             "punteggio" => "30-40",
-         ]
+        "data"  => "sabato 10", 
+        "sCasa" => "roma",
+        "sOspite" => "Cantu",
+        "punteggio" => "30-40",
 
     ]
     
 ];
 
-var_dump($array[0]);
+var_dump($array[0]['data']);
 
 ?>
 
@@ -50,8 +48,19 @@ var_dump($array[0]);
     squadre
 </h1>
 
-<p>
+    <!-- Olimpia Milano - Cantù | 55-60 */ -->
 
-</p>
+    <?php
+
+       for ($i=0; $i < count($array); $i++) {
+            echo '<p>';
+          echo 'data: ' . $array[$i]['data'] . '<br>';
+          echo $array[$i]['sCasa'] . ' - ' . $array[$i]['sOspite'] . ' | ' . $array[$i]['punteggio'];
+          echo '</p>';
+            
+        } 
+    
+    ?>
+    
 </body>
 </html>
