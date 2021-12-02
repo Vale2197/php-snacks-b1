@@ -40,10 +40,6 @@ $posts = [
 
   var_dump($posts[1]);
 
-  for ($i=0; $i < count($posts['21-11-1997']) ; $i++) { 
-     $element = $posts['21-11-1997'][$i];
-     var_dump($element);
-  }
 ?>
 
 
@@ -56,32 +52,18 @@ $posts = [
     <title>snack_3</title>
 </head>
 <body>
-    <h2>
-       21-11-1997
-    </h2>
-    <p>
-        <?php
-            for ($i=0; $i < count($posts['21-11-1997']) ; $i++) { 
-                $element = $posts['21-11-1997'][$i];
-                echo 'titolo: ' . $element['title'] . '<br>';
-                echo 'autore: ' . $element['autore'] . '<br>';
-                echo '------ <br>'; 
-             }
-        ?>
-    </p>
-
-    <h2>
-        04-12-1997
-    </h2>
-    <p>
-        <?php
-            for ($i=0; $i < count($posts['04-12-1997']) ; $i++) { 
-                $element = $posts['04-12-1997'][$i];
-                echo 'titolo: ' . $element['title'] . '<br>';
-                echo 'autore: ' . $element['autore'] . '<br>';
-                echo '------ <br>'; 
-             }
-        ?>
-    </p>
+    <?php
+        foreach ($posts as $date => $value) {
+            echo '<h2>';            
+            echo $date;           
+            echo '</h2>';
+            foreach ($value as $key => $info) {
+                echo '<p>';
+                echo 'titolo post: ' . $info['title'] . '<br>';
+                echo 'autore: ' . $info['autore'] . '<br>';
+                echo '</p>';
+            }
+        }
+    ?>
 </body>
 </html>
