@@ -33,11 +33,14 @@ $ads = [
 
 empty($ad);
 
-for ($i=0; $i < count($ads); $i++) { 
-    $randomN = rand(0, count($ads) - 1);
+$trueAds = [];
 
-    $ad = $ads[$randomN];
+for ($i=0; $i < count($ads); $i++) { 
+
+    if($ads[$i]['is_active'] == true) {
+        $trueAds[] = $ads[$i];
+    }
 }
-var_dump($ad);
+var_dump($trueAds);
 
 ?>
