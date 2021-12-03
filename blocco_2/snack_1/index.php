@@ -43,4 +43,12 @@ for ($i=0; $i < count($ads); $i++) {
 }
 var_dump($trueAds);
 
+for ($i=0; $i < count($trueAds); $i++) { 
+    # code...
+    $randomN = rand(0, count($trueAds) - 1);
+    $ad = $trueAds[$randomN];
+}
+
+var_dump($ad);
+
 ?>
