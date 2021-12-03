@@ -41,7 +41,6 @@ for ($i=0; $i < count($ads); $i++) {
         $trueAds[] = $ads[$i];
     }
 }
-var_dump($trueAds);
 
 for ($i=0; $i < count($trueAds); $i++) { 
     # code...
